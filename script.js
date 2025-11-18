@@ -59,40 +59,7 @@ function reserving() {
 
 
 
-function shows() {
-    var u = document.getElementById('aa').innerHTML = 'EGP 600/';
-    var bbb = document.getElementById('img10').src = "images40.jpg";
-}
 
-function showss() {
-    var u = document.getElementById('bb').innerHTML = 'EGP 1000/';
-    var rrr = document.getElementById('img11').src = "images41.jpg";
-
-}
-
-function showsss() {
-    var u = document.getElementById('cc').innerHTML = 'OFFER: Book directly with us and receive a 20% discount on your stay, along with a free breakfast every morning Indulge in luxury with our exclusive weekend package, including spa credits and late checkout.';
-    var rrr = document.getElementById('img12').src = "images42.jpg";
-
-}
-
-function price_image() {
-    var t = document.getElementById('ee').innerHTML = 'Price for Session: is 500 EGP';
-    var d = document.getElementById('image').src = 'images16.jpg';
-
-    var r = document.getElementById('images').src = 'imagess20.jpg'
-    var g = document.getElementById('imagess').src = 'images21.jpg';
-}
-
-function prices_image() {
-
-    var t = document.getElementById('ff').innerHTML = 'Price for Session: is 750 EGP'
-
-    var r = document.getElementById('Image').src = 'images23.png'
-    var v = document.getElementById('Images').src = 'images22.jpeg'
-    var g = document.getElementById('Imagess').src = 'images24.jpeg';
-
-}
 
 function price_images() {
 
@@ -170,3 +137,4 @@ function guestsss() {
     var l = document.getElementById('img6').src = 'images38.jpg';
 
 }
+
