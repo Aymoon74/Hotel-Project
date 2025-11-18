@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        Eltamalia Hotel
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--Home-->
+
+    <nav class="header" id="header">
+        <div class="head-top">
+            <div class="site-name">
+                <span>Eltamalia</span>
+            </div>
+            <div class="site-nav">
+                <span id="nav-btn">Menu <i class="fas fa-bars"></i></span>
+            </div>
+        </div>
+        <div class="head-bottom flex">
+            <h2>NICE AND COMFORTABLE PLACE TO STAY</h2>
+            <P>Experience unparalleled luxury and hospitality at our exquisite hotel, where every stay is a journey of
+                comfort and indulgence. Immerse yourself in a world of sophistication and personalized service, making
+                your time with us truly unforgettable.
+
+            </P>
+            <a href="#services">
+                <button type="button" class="head-btn">GET STARTED</button>
+            </a>
+        </div>
+
+    </nav>
+    <div class="sidenav" id="sidenav">
+        <span class="cancel-btn" id="cancel-btn">
+            <i class="fas fa-times"></i>
+        </span>
+
+        <ul class="navbar">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#books">Booking</a></li>
+            <li><a href="#rooms">Rooms</a></li>
+            <li><a href="#relaxs">Relaxation</a></li>
+            <li><a href="#foods">Restaurant</a></li>
+            <li><a href="#customers">Customers</a></li>
+
+        </ul>
+
+    </div>
+
+    <br>
+
+    </div>
+    <div id="modal"></div>
+
+    <!--services-->
+
+    <section class="services sec-width" id="services">
+        <div class="title">
+            <h2>Services</h2>
+        </div>
+        <div class="services-container">
+            <article class="service">
+                <div class="service-icon">
+                    <span>
+                        <i class="fas fa-utensils"></i>
+                    </span>
+                </div>
+                <div class="service-content">
+                    <h2>Food Service/Food Runner</h2>
+                    <p>Our hotel's food service, where each dish is a masterpiece crafted with passion and
+                        precision. Our seasoned chefs source only the finest ingredients to create a diverse and
+                        tantalizing menu that caters to every palate. Immerse yourself in a world of gastronomic
+                        delight, where impeccable service and culinary expertise come together to elevate your dining
+                        experience.</p>
+                    <a href="#foods" class="link">
+                        <button onclick="change_background()" type="button" class="btn" id="btn">Know More</button>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service">
+                <div class="service-icon">
+                    <span>
+                        <i class="fas fa-swimming-pool"></i>
+                    </span>
+                </div>
+                <div class="service-content">
+                    <h2>Refreshment/Relaxation</h2>
+                    <p id="paragraph">Dive into relaxation at our pristine swimming pool, offering a tranquil oasis for
+                        both leisurely
+                        swims and sun-soaked lounging. Experience ultimate bliss as you unwind by the poolside,
+                        surrounded by the serene ambiance that defines our commitment to your relaxation and
+                        well-being.</p>
+                    <a href="#relaxs" class="link">
+                        <button onclick="change_para()" type="button" class="btn">Know More</button>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service">
+                <div class="service-icon">
+                    <span>
+                        <i class="fas fa-broom" id="fas"></i>
+                    </span>
+                </div>
+                <div class="service-content">
+                    <h2>Housekeeping</h2>
+                    <p id="pp">Our housekeeping team ensures a pristine and welcoming environment throughout your stay.
+                    </p>
+
+                    <button id="icon" onclick="info()" ondblclick="know_less()" type="button" class="btn">Know
+                        More/Less</button>
+                </div>
+            </article>
+
+            <article class="service">
+                <div class="service-icon">
+                    <span>
+                        <i class="fas fa-door-closed"></i>
+                    </span>
+                </div>
+                <div class="service-content">
+                    <h2>Room Security</h2>
+                    <p id="gg"></p>
+
+                    <button type="button" onclick="disappear()" class="btn">Info</button>
+                </div>
+            </article>
+
+
+
+        </div>
+
+    </section>
+
+    <div class="book">
+        <form class="book-form" id="books">
+            <div class="form-item">
+                <label for="name">Enter your Name</label>
+                <input type="name" id="name" required>
+            </div>
+
+            <div class="form-item">
+                <label for="nat_id">National ID</label>
+                <input type="text" id="nat_id" title="Please Enter Numeric value" maxlength="14" minlength="14"
+                    required>
+            </div>
+
+            <div class="form-item">
+                <label for="phone">Phone Number</label>
+                <input type="tel" maxlength="11" minlength="11" required id="phone">
+            </div>
+
+            <div class="form-item">
+                <label for="checkin-date">Check In Date</label>
+                <input type="date" id="checkin-date" required>
+            </div>
+
+            <div class="form-item">
+                <label for="checkout-date">Check Out Date</label>
+                <input type="date" id="checkout-date" required>
+            </div>
+
+            <div class="form-item">
+                <label for="adult">Adults: </label>
+                <input type="number" id="adult" min="1" value="1" required>
+            </div>
+
+            <div class="form-item">
+                <label for="children">Children: </label>
+                <input type="number" id="children" min="1" value="1" required>
+            </div>
+
+            <div class="form-item">
+                <label for="rooms">Rooms: </label>
+                <input type="number" id="rooms" min="1" value="1" required>
+            </div>
+            <br>
+
+            <div class="form-item">
+                <input type="submit" onclick="reserving()" class="btn" value="Book Now">
+            </div>
+
+            <div class="form-item">
+                <input type="reset" class="btn" value="Reset">
+            </div>
+        </form>
+    </div>
+
+    <section class="rooms sec-width" id="rooms">
+        <div class="title">
+            <h2>Rooms</h2>
+        </div>
+        <div class="rooms-container">
+            <article class="room">
+                <div class="room-image">
+                    <img src="image1.jpg" id="img10" width="450" height="400" alt="room image">
+                </div>
+                <div class="room-text">
+                    <h3>Luxury Rooms</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            Comfortable Accommodations
+                        </li>
+
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            Modern Amenities
+                        </li>
+
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            Scenic Views
+                        </li>
+                    </ul>
+                    <p> Our rooms are designed for utmost comfort, providing a cozy and welcoming atmosphere for
+                        a
+                        relaxing stay,
+
+                        Enjoy the convenience of modern amenities, including high-speed Wi-Fi,
+                        flat-screen TVs, and luxurious bedding, ensuring a seamless and enjoyable experience,
+
+                        Many of our rooms offer breathtaking views, allowing you to wake up to picturesque
+                        landscapes or cityscapes, enhancing the overall ambiance.</p>
+                    <p class="rate">
+                        <span id="aa" title="Click on Book to show price">Price Here</span> per Night
+                    </p>
+                    <a href=" #books" class="link">
+                        <button type="button" onclick="shows()" class="btn">Book Now</button>
+                    </a>
+                    <br><br>
+
+                </div>
+            </article>
+
+            <article class="room">
+                <div class="room-image">
+                    <img src="images1.jpg" id="img11" width="450" height="400" alt="room image">
+                </div>
+                <div class="room-text">
+                    <h3>Comfortable Rooms</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            Exceptional Service
+                        </li>
+
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            Privacy and Tranquility
+                        </li>
+
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            Variety of Room Types
+                        </li>
+
+                    </ul>
+                    <p> Experience top-notch hospitality with our attentive staff, ready to cater to your needs and
+                        ensure a memorable stay,
+
+                        Our well-insulated rooms offer a peaceful retreat, providing a quiet
+                        and private space for you to unwind after a day of exploration,
+
+                        Whether you're traveling for business or leisure, we offer a range of
+                        room types to suit your preferences, from spacious suites to cozy single rooms.</p>
+                    <p class="rate">
+                        <span id="bb" title="Click on Book to show price">Price Here</span> per Night
+                    </p>
+                    <a href="#books" class="link">
+                        <button type="button" onclick="showss()" class="btn">Book Now</button>
+                    </a>
+                    <br><br>
+                </div>
+            </article>
+
+            <article class="room">
+                <div class="room-image">
+                    <img src="images3.jpg" id="img12" alt="room image">
+                </div>
+                <div class="room-text">
+                    <h3>Expensive/safety Rooms</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            Customized Experiences
+                        </li>
+
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            Hygiene and Cleanliness
+                        </li>
+
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            Central Location
+                        </li>
+
+                    </ul>
+                    <p id="cc"> Benefit from our strategic location, placing you in close proximity to key attractions,
+                        business
+                        centers, and entertainment hubs,
+
+                        We maintain rigorous cleanliness standards, with thorough room cleaning
+                        and sanitization processes, ensuring a hygienic environment for our guests,
+
+                        Enjoy a personalized stay with our room options, each designed to cater
+                        to different preferences, be it family-friendly spaces, executive suites, or rooms with special
+                        amenities.
+                    </p>
+
+                    <p class="rate">
+                        <span>EGP 1500/</span> per Night
+                    </p>
+                    <a href="#books" class="link">
+                        <button type="button" onclick="showsss()" class="btn">Book Now</button>
+                    </a>
+                    <br><br>
+
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="relaxs" id="relaxs">
+        <div class="sec-width">
+            <div class="title">
+                <h2>Relaxation</h2>
+            </div>
+            <div class="relaxs-container">
+                <div class="customer">
+                    <h3>Professional Spa Facilities</h3>
+                    <p id="ee">Hotels offering massage services often provide professional spa facilities equipped with
+                        amenities such as massage rooms, relaxation areas, and sometimes additional features like sauna
+                        or steam rooms. These well-designed spaces create a tranquil environment, allowing guests to
+                        unwind and enjoy the therapeutic benefits of a massage, concerns, such as relaxation, stress
+                        relief, or muscle tension release.</p>
+                    <img id="image" src="images17.jpg" width="450" height="350" alt="massage image">
+                    <img src="images22.avif" id="images">
+                    <img src="images22.avif" id="imagess">
+
+                    <button type="button" onclick="price_image()" class="btns">Book a Session</button>
+                </div>
+                <div class="relax">
+
+                    <h3>Qualified and Trained Masseurs</h3>
+                    <p id="ff">Quality hotels prioritize the expertise of their massage therapists. Guests can expect
+                        professional and well-trained masseurs who are skilled in various massage techniques. Ensuring
+                        that the massage therapists are knowledgeable and experienced contributes to a positive and
+                        relaxing experience, as guests can trust in the competence of the staff providing the massage
+                        services.</p>
+                    <img src="images18.jpg" id="Image" width="450" height="350" alt="massage image">
+                    <img src="images22.avif" id="Images">
+                    <img src="images22.avif" id="Imagess">
+
+                    <button type="button" onclick="prices_image()" class="btns">Book a Session</button>
+
+                </div>
+                <div class="relax">
+
+                    <h3>Variety of Massage Treatments</h3>
+                    <p id="nn"> Hotels typically offer a variety of massage treatments to cater to different preferences
+                        and
+                        therapeutic needs. This may include traditional Swedish massages, deep tissue massages,
+                        aromatherapy massages, and other specialized techniques. The availability of diverse options
+                        allows guests to choose a massage that aligns with their preferences and addresses specific
+
+                    </p>
+                    <img src="images20.jpg" id="Imagee" width="450" height="350" alt="massage image">
+                    <img src="images22.avif" id="Imagees">
+                    <img src="images22.avif" id="Imageess">
+
+                    <button type="button" onclick="price_images()" class="btns">Book a Session</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="foods sec-width" id="foods">
+        <div class="title">
+            <h2>Restaurant</h2>
+        </div>
+        <div class="foods-container">
+            <article class="food">
+                <div class="food-image">
+                    <img id="image1" src="images13.jpg" alt="Food image">
+                </div>
+                <div class="food-text">
+                    <h3>Breakfast</h3>
+                    <ul>
+                        <li> <i class="fas fa-arrow-alt-circle-right"></i>
+                            Quality and Freshness
+                        </li>
+                        <li> <i class="fas fa-arrow-alt-circle-right"></i>
+                            Variety of Options
+                        </li>
+                        <li> <i class="fas fa-arrow-alt-circle-right"></i>
+                            Convenience and Timing
+                        </li>
+                    </ul>
+                    <p id="qq">Hotels typically strive to maintain high standards of quality and freshness in their
+                        breakfast
+                        offerings. Freshly prepared items, such as omelets, pancakes, and baked goods, contribute to a
+                        positive dining experience. Quality ingredients and attention to detail in food preparation are
+                        essential for creating a positive impression on guests and encouraging them to start their day
+                        on a positive note.</p>
+                </div>
+                <p class="price">
+                    <span id="ss"></span> per Meal
+                </p>
+                <button type="button" onclick="sh_menu()" class="btns">Show Menu</button>
+
+                <br>
+        </div>
+        </article>
+
+        <article class="food">
+            <div class="food-image">
+                <img src="images14..webp" id="image2" alt="Food image">
+            </div>
+            <div class="food-text">
+                <h3>Lunch</h3>
+                <ul>
+                    <li> <i class="fas fa-arrow-alt-circle-right"></i>
+                        Diverse Menu Options
+                    </li>
+                    <li> <i class="fas fa-arrow-alt-circle-right"></i>
+                        Efficient Service
+                    </li>
+                    <li> <i class="fas fa-arrow-alt-circle-right"></i>
+                        Ambiance and Atmosphere
+                    </li>
+                </ul>
+                <p id="rr">Similar to breakfast, hotels aim to offer a diverse range of menu options during lunch to
+                    cater to
+                    the varied tastes and dietary preferences of their guests. Lunch menus often include a mix of
+                    appetizers, salads, main courses, and desserts, featuring both local and international cuisines.
+                    This diversity allows guests to choose meals that suit their preferences and dietary requirements.
+                </p>
+            </div>
+            <p class="price">
+                <span id="kk"></span> perMeal
+            </p>
+            <button type="button" onclick="sh_menus()" class="btns">Show Menu</button>
+            <br>
+            </div>
+        </article>
+
+        <article class="food">
+            <div class="food-image">
+                <img src="images14.jpg" id="image3" alt="Food image">
+            </div>
+            <div class="food-text">
+                <h3>Dinner</h3>
+                <ul>
+                    <li> <i class="fas fa-arrow-alt-circle-right"></i>
+                        Specialty and Theme Nights
+                    </li>
+                    <li> <i class="fas fa-arrow-alt-circle-right"></i>
+                        Fine Dining Experience
+                    </li>
+                    <li> <i class="fas fa-arrow-alt-circle-right"></i>
+                        Service and Hospitality
+                    </li>
+                </ul>
+                <p id="dd"> Many hotels offer a fine dining experience for dinner, featuring an upscale and elegant
+                    atmosphere.
+                    The dinner menu typically includes a selection of gourmet dishes, often crafted by skilled chefs.
+                    Fine dining in hotels emphasizes high-quality ingredients, meticulous presentation, and a
+                    sophisticated dining setting to create a memorable evening for guests.</p>
+            </div>
+            <p class="price">
+                <span id="ll"></span> per Meal
+            </p>
+            <button type="button" onclick="sh_menuss()" class="btns">Show Menu </button>
+
+            </div>
+        </article>
+
+        </div>
+        </div>
+    </section>
+
+    <section class="customers" id="customers">
+        <div class="sec-width">
+            <div class="title">
+                <h2>Guests</h2>
+            </div>
+            <div class="customers-container">
+                <div class="customer">
+                    <div class="rating">
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="far fa-star"></i></span>
+                    </div>
+                    <h3>We Loved it</h3>
+                    <p id="zz">Exceptional Stay with Outstanding Service
+                        Our recent stay at this hotel exceeded all expectations. </p>
+                    <img src="image2.png" id="img7" width="450" height="350" alt="customer image">
+                    <span id="lol"></span>
+
+                    <img src="images22.avif" id="img1">
+                    <span id="kol"></span>
+
+                    <img src="images22.avif" id="img2">
+                    <span id="fol"></span>
+
+                    <button type="button" onclick="guests()" class="btnss">Show More</button>
+
+                </div>
+
+                <div class="customer">
+                    <div class="rating">
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="far fa-star"></i></span>
+                    </div>
+                    <h3>Comfortable Living</h3>
+                    <p id="para">A Hidden Gem and Pure Luxury
+                        ,Discovering this hotel was like stumbling upon a hidden gem. </p>
+                    <img src="image4.jpg" id="img8" width="450" height="350" alt="customer image">
+                    <span id="hol"></span>
+
+                    <img src="images22.avif" id="img3">
+                    <span id="dol"></span>
+
+                    <img src="images22.avif" id="img4">
+                    <span id="sol"></span>
+
+                    <button type="button" onclick="guestss()" class="btnss">Show More</button>
+
+                </div>
+                <div class="customer">
+                    <div class="rating">
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="far fa-star"></i></span>
+                    </div>
+                    <h3>Nice Place</h3>
+                    <p id="ggg"> Perfect Blend of Relaxation and Convenience,
+                        Our stay at this hotel was the epitome of comfort and convenience.
+
+                    </p>
+                    <img src="image5.jpg" id="img9" width="450" height="350" alt="customer image">
+                    <span id="ool"></span>
+
+                    <img src="images22.avif" id="img5">
+                    <span id="mol"></span>
+
+                    <img src="images22.avif" id="img6">
+                    <span id="xol"></span>
+
+
+                    <button type="button" onclick="guestsss()" class="btnss">Show More</button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <h2>About US</h2>
+                <p> We pride ourselves on delivering an unparalleled experience where luxury meets genuine hospitality.
+                    From meticulously designed rooms to personalized service, we strive to create a welcoming haven for
+                    every guest, making each stay a memorable journey in refined comfort.</p>
+
+                <ul class="social-icons">
+                    <li class="flex">
+                        <a href="https://www.twitter.com" target="_blank">
+                            <i class="fa fa-twitter fa-2x"></i>
+                        </a>
+                    </li>
+                    <li class="flex">
+                        <a href="https://www.facebook.com" target="_blank">
+                            <i class="fa fa-facebook fa-2x"></i>
+                        </a>
+
+                    </li>
+                    <li class="flex">
+                        <a href="https://www.instagram.com" target="_blank">
+
+                            <i class="fa fa-instagram fa-2x"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>Useful Links</h2>
+                <a href="#header">Home</a>
+                <a href="#relaxs">Relaxation</a>
+                <a href="#foods">Restaurant</a>
+            </div>
+
+            <div>
+                <h2>Other Links</h2>
+                <a href="#books">Booking</a>
+                <a href="#rooms">Rooms</a>
+                <a href="#services">Services</a>
+                <a href="#customers">Guests</a>
+            </div>
+
+            <div>
+                <h2>Contact US</h2>
+                <div class="contact-item">
+                    <span>
+                        <i class="fas fa-map-marker-alt"></i>
+                    </span>
+                    <span>105 Eltamalia St.Mountain View, Cairo
+
+                    </span>
+                </div>
+
+                <div class="contact-item">
+                    <span>
+                        <i class="fas fa-phone-alt"></i>
+                    </span>
+                    <span>+9952422056
+
+                    </span>
+                </div>
+
+                <div class="contact-item">
+                    <span>
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <span>info@Eltamalia.com
+
+                    </span>
+                </div>
+
+            </div>
+
+
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
